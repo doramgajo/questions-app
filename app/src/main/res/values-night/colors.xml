@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gris">#A6A6A6</color>
+
+    <color name="boton_destacado">#9DC8F1</color>
+    <color name="boton_secundario">#74A3E1</color>
+    <color name="temporizador">#FFFFFF</color>
+    <color name="textoBotones">#000000</color>
+    <color name="texto">#FFFFFF</color>
+    <color name="textoDecoracion">#19FFFFFF</color>
+    <color name="fondo">#183152</color>
+
+</resources>

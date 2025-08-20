@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".MenuPrincipal"
+    tools:layout_editor_absoluteX="176dp"
+    tools:layout_editor_absoluteY="-116dp">
+
+    <ImageView
+        android:id="@+id/M_imagenPortada"
+        android:layout_width="291dp"
+        android:layout_height="269dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/M_botonJugar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagen" />
+
+    <Button
+        android:id="@+id/M_botonJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_destacado"
+        android:drawableLeft="@drawable/icono_jugar"
+        android:drawableTint="@color/textoBotones"
+        android:paddingLeft="10dp"
+        android:paddingRight="25dp"
+        android:text="@string/botonJugar"
+        android:textColor="@color/textoBotones"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/M_botonTemporizador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/M_imagenPortada"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/M_botonTemporizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="250dp"
+        android:backgroundTint="@color/boton_secundario"
+        android:checked="false"
+        android:drawableLeft="@drawable/icono_temporizador"
+        android:drawableTint="@color/textoBotones"
+        android:textColor="@color/textoBotones"
+        android:textOff="@string/botonTemporizadorON"
+        android:textOn="@string/botonTemporizadorOFF"
+        app:layout_constraintBottom_toTopOf="@+id/M_switchDificultad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/M_imagenPortada"
+        app:layout_constraintTop_toBottomOf="@+id/M_botonJugar" />
+
+    <Switch
+        android:id="@+id/M_switchDificultad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:thumbTint="@color/boton_destacado"
+        android:trackTint="@color/boton_secundario"
+        app:layout_constraintBottom_toTopOf="@+id/M_botonEstadisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/M_imagenPortada"
+        app:layout_constraintTop_toBottomOf="@+id/M_botonTemporizador" />
+
+    <TextView
+        android:id="@+id/M_textoFacil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="@string/textoFacil"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/M_switchDificultad"
+        app:layout_constraintEnd_toStartOf="@+id/M_switchDificultad"
+        app:layout_constraintTop_toTopOf="@+id/M_switchDificultad" />
+
+    <TextView
+        android:id="@+id/M_textoDificil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/textoDificil"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/M_switchDificultad"
+        app:layout_constraintStart_toEndOf="@+id/M_switchDificultad"
+        app:layout_constraintTop_toTopOf="@+id/M_switchDificultad" />
+
+    <Button
+        android:id="@+id/M_botonEstadisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_secundario"
+        android:drawableLeft="@drawable/icono_estadisticas"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/estadisticas"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/M_botonAnnadirPregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/M_imagenPortada"
+        app:layout_constraintTop_toBottomOf="@+id/M_switchDificultad" />
+
+    <Button
+        android:id="@+id/M_botonAnnadirPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_secundario"
+        android:drawableLeft="@drawable/icono_preguntas"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonAnnadirPreguntas"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/M_imagenPortada"
+        app:layout_constraintTop_toBottomOf="@+id/M_botonEstadisticas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".Estadisticas">
+
+    <TextView
+        android:id="@+id/E_texto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/estadisticas"
+        android:textColor="@color/texto"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/E_scrollEstadisticas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/E_scrollEstadisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_texto2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estadisticasPartidas"
+                            android:textColor="@color/texto"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPartidasJugadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/partidasJugadas"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPartidasJugadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_texto3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estadisticasPreguntas"
+                            android:textColor="@color/texto"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPreguntasRespondidas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/preguntasRespondidas"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPreguntasRespondidas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPreguntasAcertadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/preguntasAcertadas"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPreguntasAcertadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPreguntasFalladas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/preguntasFalladas"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPreguntasFalladas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/E_datoPorcentajeAciertos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="0 %"
+                                android:textColor="@color/texto"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/E_textoPorcentajeAciertos"
+                                app:layout_constraintStart_toStartOf="@+id/E_textoPorcentajeAciertos"
+                                app:layout_constraintTop_toBottomOf="@+id/E_textoPorcentajeAciertos" />
+
+                            <TextView
+                                android:id="@+id/E_textoPorcentajeFallos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="15dp"
+                                android:text="Fallos"
+                                android:textColor="@color/texto"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/E_textoPorcentajeAciertos" />
+
+                            <TextView
+                                android:id="@+id/E_datoPorcentajeFallos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="0 %"
+                                android:textColor="@color/texto"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/E_textoPorcentajeFallos"
+                                app:layout_constraintStart_toStartOf="@+id/E_textoPorcentajeFallos"
+                                app:layout_constraintTop_toBottomOf="@+id/E_textoPorcentajeFallos" />
+
+                            <TextView
+                                android:id="@+id/E_textoPorcentajeAciertos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="15dp"
+                                android:text="Aciertos"
+                                android:textColor="@color/texto"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/E_datoPorcentajeAciertos"
+                                app:layout_constraintEnd_toStartOf="@+id/E_textoPorcentajeFallos"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ProgressBar
+                                android:id="@+id/E_barraPorcentajeAciertos"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:progressBackgroundTint="@color/boton_secundario"
+                                android:progressTint="@color/boton_destacado"
+                                app:layout_constraintBottom_toBottomOf="@+id/E_datoPorcentajeAciertos"
+                                app:layout_constraintEnd_toEndOf="@+id/E_datoPorcentajeAciertos"
+                                app:layout_constraintStart_toStartOf="@+id/E_datoPorcentajeAciertos"
+                                app:layout_constraintTop_toTopOf="@+id/E_datoPorcentajeAciertos" />
+
+                            <ProgressBar
+                                android:id="@+id/E_barraPorcentajeFallos"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="25dp"
+                                android:progressBackgroundTint="@color/boton_secundario"
+                                android:progressTint="@color/boton_destacado"
+                                app:layout_constraintBottom_toBottomOf="@+id/E_datoPorcentajeFallos"
+                                app:layout_constraintEnd_toEndOf="@+id/E_datoPorcentajeFallos"
+                                app:layout_constraintStart_toStartOf="@+id/E_datoPorcentajeFallos"
+                                app:layout_constraintTop_toBottomOf="@+id/E_textoPorcentajeFallos" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_texto4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estadisticasBotones"
+                            android:textColor="@color/texto"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoBotonesPulsados"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/botonesPulsados"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoBotonesPulsados"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_texto5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estadisticasRachas"
+                            android:textColor="@color/texto"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoMayorRacha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/rachaMayor"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoRachaMasAlta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoRachasTotales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/rachasTotales"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoRachasTotales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoRachasDe5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/rachasDe5"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoRachasDe5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoRachasDe10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/rachasDe10"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoRachasDe10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_texto6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/estadisticasTemporizador"
+                            android:textColor="@color/texto"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPartidasFaciles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/partidasFaciles"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPartidasFaciles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoPartidasDificiles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/partidasDificiles"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoPartidasDificiles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoRespuestasATiempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/respuestasConTiempo"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoRespuestasATiempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoTiempoAgotado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/respuestasSinTiempo"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoTiempoAgotado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/E_textoTiempoRestante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/tiempoRestante"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/E_datoTiempoRestante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/texto"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </TableLayout>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/E_botonVolverMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/boton_secundario"
+        android:drawableLeft="@drawable/icono_volveramenu"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonVolver"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/E_scrollEstadisticas"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

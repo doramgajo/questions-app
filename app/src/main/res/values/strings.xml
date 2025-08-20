@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Questions</string>
+
+    <!--Botones compartidos-->
+    <string name="botonVolver">Volver al menú</string>
+    <string name="botonVerdadero">Verdadero</string>
+    <string name="botonFalso">Falso</string>
+
+    <!--Menú principal-->
+    <string name="botonJugar">Jugar</string>
+    <string name="botonAnnadirPreguntas">Añadir preguntas</string>
+
+    <!--Temporizador-->
+    <string name="botonTemporizadorON">Activar temporizador</string>
+    <string name="botonTemporizadorOFF">Desactivar temporizador</string>
+    <string name="textoFacil">Fácil</string>
+    <string name="textoDificil">Difícil</string>
+
+    <!--Añadir pregunta-->
+    <string name="textoAnnadirPregunta">Añadir pregunta</string>
+    <string name="textoPregunta1">Escriba el texto de la pregunta:</string>
+    <string name="textoPregunta2">Escriba una breve explicación que se mostrará tras responder:</string>
+    <string name="toastPreguntaAnnadida">Pregunta añadida al juego. Puede continuar añadiendo más preguntas.</string>
+    <string name="toastPreguntaNoAnnadida">Para añadir una pregunta debe rellenar los campos y elegir una respuesta.</string>
+    <string name="interrogacion1">\¿</string>
+    <string name="interrogacion2">\?</string>
+
+
+    <!--Juego-->
+    <string name="respuestaCorrecta">¡Respuesta correcta!</string>
+    <string name="respuestaIncorrecta">¡Respuesta incorrecta!</string>
+    <string name="tiempoAgotado">¡Tiempo agotado!</string>
+
+
+    <string name="botonAnterior">Anterior</string>
+    <string name="botonSiguiente">Siguiente</string>
+    <string name="botonAleatorio">Pregunta aleatoria</string>
+
+    <!--Estadísticas-->
+    <string name="estadisticas">Estadísticas</string>
+    <string name="estadisticasPartidas">Estadísticas de partidas</string>
+            <string name="partidasJugadas">Partidas jugadas:</string>
+
+    <string name="estadisticasPreguntas">Estadísticas de preguntas</string>
+            <string name="preguntasRespondidas">Preguntas respondidas:</string>
+            <string name="preguntasAcertadas">Preguntas acertadas:</string>
+            <string name="preguntasFalladas">Preguntas falladas</string>
+
+    <string name="estadisticasBotones">Estadísticas de botones</string>
+            <string name="botonesPulsados">Botones pulsados:</string>
+
+    <string name="estadisticasRachas">Estadísticas de rachas</string>
+            <string name="rachaMayor">Mayor racha:</string>
+            <string name="rachasTotales">Rachas totales:</string>
+            <string name="rachasDe5">Rachas de 5 aciertos:</string>
+            <string name="rachasDe10">Rachas de 10 aciertos:</string>
+
+    <string name="estadisticasTemporizador">Estadísticas del temporizador</string>
+            <string name="partidasFaciles">Partidas fáciles:</string>
+            <string name="partidasDificiles">Partidas difíciles:</string>
+            <string name="respuestasConTiempo">Respuestas a tiempo:</string>
+            <string name="respuestasSinTiempo">Veces que se agotó el tiempo:</string>
+            <string name="tiempoRestante">Tiempo restante total:</string>
+</resources>

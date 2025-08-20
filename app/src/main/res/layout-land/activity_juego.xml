@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".Juego">
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_secundario"
+        android:drawableLeft="@drawable/icono_volveramenu"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonVolver"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAleatorio" />
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textColor="@color/texto"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/juego_texto_explicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoPregunta" />
+
+    <Button
+        android:id="@+id/botonAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gris"
+        android:drawableLeft="@drawable/icono_anterior"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonAnterior"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonAleatorio"
+        app:layout_constraintEnd_toStartOf="@+id/botonAleatorio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botonAleatorio" />
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gris"
+        android:drawableRight="@drawable/icono_siguiente"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonSiguiente"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/botonAleatorio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonAleatorio"
+        app:layout_constraintTop_toTopOf="@+id/botonAleatorio" />
+
+    <Button
+        android:id="@+id/botonVerdadero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_destacado"
+        android:text="@string/botonVerdadero"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:iconTint="@color/textoBotones"
+        app:layout_constraintBottom_toTopOf="@+id/botonAleatorio"
+        app:layout_constraintEnd_toStartOf="@+id/botonFalso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/juego_texto_racha" />
+
+    <Button
+        android:id="@+id/botonFalso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_destacado"
+        android:text="@string/botonFalso"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:iconTint="@color/textoBotones"
+        app:layout_constraintBottom_toBottomOf="@+id/botonVerdadero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonVerdadero"
+        app:layout_constraintTop_toTopOf="@+id/botonVerdadero" />
+
+    <TextView
+        android:id="@+id/textoPregunta"
+        android:layout_width="691dp"
+        android:layout_height="wrap_content"
+        android:height="80dp"
+        android:gravity="center"
+        android:text="Pregunta"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/botonAleatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gris"
+        android:drawableLeft="@drawable/icono_aleatorio"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonAleatorio"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonVolver"
+        app:layout_constraintEnd_toStartOf="@+id/botonSiguiente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonAnterior"
+        app:layout_constraintTop_toBottomOf="@+id/botonVerdadero" />
+
+    <TextView
+        android:id="@+id/juego_texto_racha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="racha"
+        android:textColor="@color/texto"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/botonVerdadero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/juego_texto_explicacion" />
+
+    <TextView
+        android:id="@+id/juego_texto_explicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="explicacion"
+        android:textColor="@color/texto"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/juego_texto_racha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoResultado" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="678dp"
+        android:layout_height="wrap_content"
+        android:progress="50"
+        android:progressTint="@color/texto"
+        app:layout_constraintBottom_toTopOf="@+id/textoPregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imagenTemporizador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagenTemporizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/temporizador"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        app:srcCompat="@drawable/icono_temporizador_oscuro" />
+
+    <TextView
+        android:id="@+id/textoFondo"
+        android:layout_width="357dp"
+        android:layout_height="356dp"
+        android:gravity="center"
+        android:rotation="15"
+        android:text="\¿\?"
+        android:textColor="@color/textoDecoracion"
+        android:textSize="250sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textoPregunta"
+        app:layout_constraintEnd_toEndOf="@+id/textoPregunta"
+        app:layout_constraintStart_toStartOf="@+id/textoPregunta"
+        app:layout_constraintTop_toTopOf="@+id/textoPregunta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

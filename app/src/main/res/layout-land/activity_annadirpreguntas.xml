@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".AnnadirPreguntas">
+
+    <TextView
+        android:id="@+id/AP_texto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAnnadirPregunta"
+        android:textColor="@color/texto"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/AP_texto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AP_texto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoPregunta1"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/AP_texto3"
+        app:layout_constraintEnd_toStartOf="@+id/AP_campoPregunta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AP_texto1" />
+
+    <TextView
+        android:id="@+id/AP_texto3"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="@string/textoPregunta2"
+        android:textColor="@color/texto"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/AP_botonRespuestaVerdadero"
+        app:layout_constraintEnd_toEndOf="@+id/AP_texto2"
+        app:layout_constraintStart_toStartOf="@+id/AP_texto2"
+        app:layout_constraintTop_toBottomOf="@+id/AP_texto2" />
+
+    <TextView
+        android:id="@+id/AP_texto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/interrogacion1"
+        android:textColor="@color/texto"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_campoPregunta"
+        app:layout_constraintEnd_toStartOf="@+id/AP_campoPregunta"
+        app:layout_constraintStart_toEndOf="@+id/AP_texto2"
+        app:layout_constraintTop_toTopOf="@+id/AP_campoPregunta" />
+
+    <TextView
+        android:id="@+id/AP_texto5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/interrogacion2"
+        android:textColor="@color/texto"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_campoPregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AP_campoPregunta"
+        app:layout_constraintTop_toTopOf="@+id/AP_campoPregunta" />
+
+    <EditText
+        android:id="@+id/AP_campoPregunta"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:inputType="textMultiLine"
+        android:maxLength="75"
+        android:maxLines="5"
+        android:minHeight="48dp"
+        android:minLines="1"
+        android:textColor="@color/texto"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_texto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/AP_texto2"
+        app:layout_constraintTop_toTopOf="@+id/AP_texto2" />
+
+    <EditText
+        android:id="@+id/AP_campoExplicacion"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:inputType="textMultiLine"
+        android:maxLength="50"
+        android:maxLines="5"
+        android:minLines="1"
+        android:textColor="@color/texto"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_texto3"
+        app:layout_constraintEnd_toEndOf="@+id/AP_campoPregunta"
+        app:layout_constraintStart_toStartOf="@+id/AP_campoPregunta"
+        app:layout_constraintTop_toTopOf="@+id/AP_texto3" />
+
+    <Button
+        android:id="@+id/AP_botonRespuestaVerdadero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/gris"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonVerdadero"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:icon="@drawable/icono_verdadero"
+        app:layout_constraintBottom_toTopOf="@+id/AP_botonVolverMenu"
+        app:layout_constraintEnd_toStartOf="@+id/AP_botonRespuestaFalso"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AP_texto3" />
+
+    <Button
+        android:id="@+id/AP_botonRespuestaFalso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/gris"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonFalso"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:icon="@drawable/icono_falso"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_botonRespuestaVerdadero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/AP_botonRespuestaVerdadero"
+        app:layout_constraintTop_toTopOf="@+id/AP_botonRespuestaVerdadero" />
+
+    <Button
+        android:id="@+id/AP_botonAnnadirPregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_destacado"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/textoAnnadirPregunta"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:icon="@drawable/icono_annadir_pregunta"
+        app:layout_constraintBottom_toBottomOf="@+id/AP_botonVolverMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/AP_botonVolverMenu"
+        app:layout_constraintTop_toTopOf="@+id/AP_botonVolverMenu" />
+
+    <Button
+        android:id="@+id/AP_botonVolverMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton_secundario"
+        android:drawableLeft="@drawable/icono_volveramenu"
+        android:drawableTint="@color/textoBotones"
+        android:text="@string/botonVolver"
+        android:textColor="@color/textoBotones"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/AP_botonAnnadirPregunta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AP_botonRespuestaVerdadero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
